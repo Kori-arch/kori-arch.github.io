@@ -1,36 +1,113 @@
+/* =========================
+   RESET & BASE
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  text-align: center;
+  padding: 120px 20px 80px;
+}
+
+header h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* =========================
+   PROJECT LIST (HOMEPAGE)
+========================= */
+
 .projects {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 20px 120px;
 }
 
 .project-item {
   display: block;
-  margin-bottom: 120px;
   text-decoration: none;
-  color: black;
-}
-
-.project-item img {
-  width: 100%;
-  display: block;
-}
-
-.project-info {
-  margin-top: 20px;
-}
-
-.project-info h2 {
-  font-size: 22px;
-  font-weight: 500;
-}
-
-.project-info p {
-  color: #777;
-  font-size: 14px;
+  color: #111;
+  margin-bottom: 140px;
 }
 
 .project-item img {
   width: 100%;
   max-width: 1200px;
   display: block;
+}
+
+.project-info {
+  margin-top: 24px;
+}
+
+.project-info h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.project-info p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* =========================
+   PROJECT DETAIL PAGE
+========================= */
+
+.project-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px;
+}
+
+.project-detail img {
+  width: 100%;
+  display: block;
+  margin-bottom: 80px;
+}
+
+/* =========================
+   PDF BUTTONS
+========================= */
+
+.project-actions {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.project-actions a {
+  border: 1px solid #111;
+  padding: 12px 28px;
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
+}
+
+.project-actions a:hover {
+  background-color: #111;
+  color: #fff;
 }
