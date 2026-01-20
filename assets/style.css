@@ -120,8 +120,13 @@ header p {
 /* NAVIGATION */
 .project-nav {
   display: flex;
-  justify-content: space-between;
-  margin: 60px 0 80px;
+  justify-content: space-between; /* Membuat Prev di kiri, Home di tengah, Next di kanan */
+  
+  /* KUNCI AGAR SEJAJAR DENGAN TEPI GAMBAR */
+  max-width: 1100px;    /* Samakan dengan max-width gambar Anda */
+  margin: 60px auto 80px; /* 'auto' membuat navigasi berada di tengah layar */
+  
+  padding: 0; /* Menghilangkan padding agar teks benar-benar lurus dengan ujung gambar */
 }
 
 .project-nav .prev {
