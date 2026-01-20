@@ -108,6 +108,10 @@ header p {
   font-size: 14px;
 }
 
+.project-detail img {
+  border: 10px solid red;
+}
+
 .project-actions a:hover {
   background-color: #111;
   color: #fff;
