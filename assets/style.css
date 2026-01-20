@@ -28,3 +28,9 @@
   color: #777;
   font-size: 14px;
 }
+
+.project-item img {
+  width: 100%;
+  max-width: 1200px;
+  display: block;
+}
