@@ -78,7 +78,7 @@ header p {
 ========================= */
 
 .project-detail {
-  padding: 0px 24px;
+  padding: 0px 24px 120px;
 }
 
 .project-detail img {
@@ -111,7 +111,8 @@ header p {
   font-size: 14px;
 }
 
-.project-detail img {
+.project-actions {
+  margin-top: 80px;
 }
 
 .project-actions a:hover {
