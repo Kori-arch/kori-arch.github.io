@@ -91,6 +91,10 @@ header p {
   margin: 0 auto;
 }
 
+.project-detail img:first-of-type {
+  margin-top: 0 !important;
+}
+
 /* =========================
    PDF BUTTONS
 ========================= */
