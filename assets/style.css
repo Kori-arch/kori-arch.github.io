@@ -119,3 +119,26 @@ header p {
   background-color: #111;
   color: #fff;
 }
+
+/* =========================
+   PROJECT NAVIGATION
+========================= */
+
+.project-nav {
+  max-width: 1100px;
+  margin: 120px auto 0;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.project-nav a {
+  text-decoration: none;
+  color: #777;
+  transition: color 0.2s ease;
+}
+
+.project-nav a:hover {
+  color: #111;
+}
