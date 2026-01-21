@@ -316,3 +316,55 @@ html {
   border-radius: 2px;
   display: block;
 }
+
+/* =========================
+   CONTACT PAGE - FINAL CLEAN
+========================= */
+
+/* 1. Atur container utama agar sejajar navigasi */
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 0 120px;
+}
+
+/* 2. Hilangkan warna biru dan atur ikon */
+.contact-item a, 
+.social-links a {
+  color: #111 !important; /* Paksa jadi hitam agar tidak biru */
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px; /* Jarak antara ikon dan teks */
+  font-size: 20px;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.contact-item a:hover, 
+.social-links a:hover {
+  opacity: 0.6;
+}
+
+/* 3. Atur ukuran ikon Font Awesome */
+.contact-item i {
+  font-size: 20px;
+  color: #555; /* Ikon sedikit lebih abu-abu agar elegan */
+}
+
+/* 4. Atur jarak antar link sosial */
+.social-links {
+  display: flex;
+  gap: 30px;
+}
+
+/* 5. Tambahkan garis bawah tipis untuk Instagram/LinkedIn */
+.social-links a {
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+}
+
+.social-links a:hover {
+  border-bottom: 1px solid #111;
+}
