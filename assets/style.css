@@ -77,30 +77,42 @@ html {
 }
 
 /* =========================
-   3. HEADER & HOMEPAGE (SPLIT-SCREEN GRID)
+   3. HEADER (DIPERBAIKI AGAR TERKUNCI)
 ========================= */
 header {
-  width: 1100px;
-  margin: 0 auto;
+  /* KUNCI: Lebar harus persis sama dengan .projects (1100px) */
+  width: 1100px; 
+  margin: 0 auto; /* Menjaga teks tetap di tengah layar bersama konten lainnya */
   text-align: left;
-  padding: 120px 0 60px; /* Ruang napas yang lega */
+  padding: 100px 0 60px;
+  /* Memastikan tidak ada padding samping yang bikin teks geser */
+  box-sizing: border-box; 
 }
 
 header h1 {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #999;
-  font-weight: 400;
-  margin-bottom: 15px;
+  font-size: 32px; 
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111;
+  /* Menghilangkan kemungkinan teks melebar tak terkontrol */
+  display: block; 
 }
 
 header p {
-  font-size: 28px;
-  color: #111;
-  max-width: 700px;
-  line-height: 1.4;
-  font-weight: 600;
+  font-size: 15px;
+  color: #666;
+  /* Membatasi lebar teks deskripsi agar tetap proporsional */
+  max-width: 550px; 
+  line-height: 1.6;
+  display: block;
+}
+
+/* =========================
+   PENYESUAIAN BODY (AGAR TIDAK GOYANG)
+========================= */
+body {
+  min-width: 1100px; /* Mencegah seluruh elemen 'penyet' saat dizoom */
+  overflow-x: auto; /* Munculkan scroll horizontal jika layar kekecilan, bukan merusak layout */
 }
 
 .projects {
