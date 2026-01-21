@@ -90,7 +90,7 @@ header p {
 }
 
 .project-detail img:not(:first-of-type) {
-  margin-top: 24px;
+  margin-top: 0;
 }
 
 /* =========================
