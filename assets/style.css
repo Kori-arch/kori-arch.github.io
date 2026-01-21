@@ -318,62 +318,73 @@ html {
 }
 
 /* =========================
-   CONTACT PAGE - MINIMALIST
+   FIXED CONTACT PAGE
 ========================= */
 
 .contact-container {
-    max-width: 1100px;
+    max-width: 1100px; /* Sejajar Navigasi */
     margin: 0 auto;
-    padding: 120px 0;
-    text-align: center;
+    padding: 100px 0;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-wrapper {
+    text-align: left; /* Biar sejajar tepi kiri nama Anda */
 }
 
 .sub-label {
     font-size: 12px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: #999;
     margin-bottom: 10px;
+    display: block;
 }
 
-.contact-header h1 {
-    font-size: 64px; /* Judul besar biar keren */
+.contact-wrapper h1 {
+    font-size: 48px;
     font-weight: 600;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
+    color: #111;
 }
 
-.contact-links-wrapper {
+.contact-methods {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
-/* KUNCI: Menghapus warna biru */
+/* MENGHAPUS WARNA BIRU SECARA TOTAL */
 .c-link {
-    color: #111 !important; /* Hitam pekat */
-    text-decoration: none;
+    color: #111 !important; /* Hitam mutlak */
+    text-decoration: none !important;
     font-size: 18px;
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    transition: opacity 0.3s;
-    border-bottom: 1px solid transparent;
-    padding-bottom: 4px;
+    transition: 0.3s;
+}
+
+.c-link i {
+    font-size: 20px;
+    color: #111 !important;
 }
 
 .c-link:hover {
     opacity: 0.5;
-    border-bottom: 1px solid #111;
 }
 
-.social-group {
+.social-row {
     display: flex;
     gap: 40px;
     margin-top: 10px;
 }
 
-/* Mengatur ukuran ikon */
-.c-link i {
-    font-size: 20px;
+/* Tambahkan garis bawah tipis khusus untuk link sosial */
+.social-row .c-link {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+}
+
+.social-row .c-link:hover {
+    border-bottom: 1px solid #111;
 }
