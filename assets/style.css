@@ -236,3 +236,89 @@ html {
 .nav-links a:hover {
   color: #111;
 }
+
+/* =========================
+   ABOUT ME PAGE STYLES
+========================= */
+
+.about-container {
+  max-width: 1100px; /* SAMA DENGAN NAVIGASI & GAMBAR */
+  margin: 0 auto;
+  padding: 40px 0 120px;
+}
+
+/* Judul About Me */
+.about-header {
+  text-align: left; /* Biar lurus dengan tepi kiri navigasi */
+  padding: 40px 0 60px;
+}
+
+.about-header h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Layout 2 Kolom */
+.about-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* Kolom bio sedikit lebih lebar */
+  gap: 100px; /* Jarak antara teks bio dan CV */
+  align-items: start;
+}
+
+/* Kolom Kiri: Biografi */
+.about-bio p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+/* Kolom Kanan: Pengalaman & Pendidikan */
+.cv-section {
+  margin-bottom: 50px;
+}
+
+.cv-section h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #999;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.cv-item {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.year {
+  font-size: 14px;
+  color: #999;
+  min-width: 100px;
+}
+
+.details h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.details p {
+  font-size: 15px;
+  color: #666;
+}
+
+/* Agar tampilan rapi di HP */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .about-container {
+    padding: 20px 24px;
+  }
+}
