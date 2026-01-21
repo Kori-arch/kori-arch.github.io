@@ -1,7 +1,6 @@
 /* =========================
-   RESET & BASE
+   1. RESET & BASE (Milik Anda)
 ========================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -15,202 +14,25 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
-   HEADER
-========================= */
-
-header {
-  text-align: center;
-  padding: 120px 20px 80px;
-}
-
-header h1 {
-  font-size: 48px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 16px;
-  color: #666;
-}
-
-/* =========================
-   PROJECT LIST (HOMEPAGE)
-========================= */
-
-.projects {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px 120px;
-}
-
-.project-item {
-  display: block;
-  text-decoration: none;
-  color: #111;
-  margin-bottom: 140px;
-}
-
-.project-item img {
-  width: 100%;
-  max-width: 1200px;
-  display: block;
-}
-
-.project-info {
-  margin-top: 24px;
-}
-
-.project-info h2 {
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 6px;
-}
-
-.project-info p {
-  font-size: 14px;
-  color: #777;
-}
-
-/* =========================
-   PROJECT DETAIL PAGE
-========================= */
-
-.project-detail {
-  padding: 0px 24px 120px;
-}
-
-.project-detail img {
-  width: 100%;
-  max-width: 1100px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.project-detail img:not(:first-of-type) {
-  margin-top: 0;
-}
-
-/* =========================
-   PROJECT DOWNLOAD
-========================= */
-
-.project-download {
-  display: flex;
-  justify-content: center;
-  margin: 80px 0 40px;
-}
-
-.project-download a {
-  border: 1px solid #111;
-  padding: 16px 40px;
-  font-size: 18px;
-  text-decoration: none;
-  color: #111;
-}
-
-.project-download a:hover {
-  background-color: #111;
-  color: #fff;
-}
-
-
-/* NAVIGATION - Versi Final & Aman */
-.project-nav {
-  display: flex;
-  max-width: 1100px;    /* TETAP: Agar sejajar dengan tepi gambar Anda */
-  margin: 60px auto 80px; /* TETAP: Agar navigasi berada di tengah layar */
-  padding: 0;
-}
-
-/* Mengatur 3 area agar lebarnya sama rata (33.3%) */
-.project-nav a {
-  flex: 1; 
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s;
-}
-
-/* KUNCI: Previous tetap di tepi kiri gambar */
-.project-nav .prev {
-  text-align: left;
-  color: #777; /* Warna link standar Anda */
-}
-
-/* KUNCI: Home tepat di titik tengah gambar */
-.project-nav .home {
-  text-align: center;
-  color: #999; /* Warna abu-abu sesuai desain Anda */
-}
-
-/* KUNCI: Next tetap di tepi kanan gambar */
-.project-nav .next {
-  text-align: right;
-  color: #777; /* Warna link standar Anda */
-}
-
-/* Efek Hover untuk semua tombol di navigasi */
-.project-nav a:hover {
-  color: #111;
-}
-
-/* =========================
-   PROJECT CONTENT WRAPPER
-========================= */
-
-.project-content {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* SMOOTH SCROLL */
 html {
-  scroll-behavior: smooth; /* Membuat efek scroll jadi halus, tidak melompat */
-}
-
-/* BACK TO TOP BUTTON */
-.back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 45px;
-  height: 45px;
-  background-color: #111; /* Warna hitam agar senada dengan desain Anda */
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%; /* Membuat bentuk lingkaran */
-  font-size: 20px;
-  z-index: 1000; /* Agar tidak tertutup gambar */
-  transition: opacity 0.3s, transform 0.3s;
-}
-
-.back-to-top:hover {
-  background-color: #444;
-  transform: translateY(-5px); /* Efek sedikit naik saat disentuh mouse */
+  scroll-behavior: smooth;
 }
 
 /* =========================
-   TOP NAVIGATION (UNIFIED)
+   2. NAVIGASI (DIPERBAIKI AGAR STATIS)
 ========================= */
-
 .main-nav {
   width: 100%;
   background-color: #fff;
-  padding: 40px 0; /* Jarak elegan dari atas */
+  padding: 40px 0;
 }
 
 .nav-container {
-  max-width: 1100px; /* KUNCI: Sejajar dengan konten/gambar */
-  margin: 0 auto;
+  width: 1100px !important; /* Kunci lebar agar sejajar about/contact */
+  margin: 0 auto !important;
   display: flex;
-  justify-content: space-between; /* Nama di kiri, Menu di kanan */
+  justify-content: space-between;
   align-items: center;
-  padding: 0;
 }
 
 .brand {
@@ -224,90 +46,117 @@ html {
 
 .nav-links {
   display: flex;
-  gap: 30px; /* Jarak antar menu */
+  gap: 30px;
+  list-style: none;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #777;
   font-size: 16px;
-  transition: color 0.3s;
+  transition: 0.3s;
+  position: relative;
+  padding-bottom: 4px;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .nav-links a.active {
   color: #111;
 }
 
-/* Penanda halaman aktif (Opsional) */
-.nav-links a.active {
-  color: #111;
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0; height: 1px;
+  bottom: 0; left: 0;
+  background-color: #111;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+  width: 100%;
+}
+
+/* =========================
+   3. HOMEPAGE & PROJECTS (MILIK ANDA)
+========================= */
+header {
+  text-align: center;
+  padding: 120px 20px 80px;
+}
+
+header h1 {
+  font-size: 48px;
   font-weight: 600;
-}
-}
-
-/* =========================================
-   ABOUT ME PAGE - TOTAL FIXED & STATIC
-   Kunci lebar 1100px agar tidak goyang
-============================================ */
-
-/* Container utama yang membungkus semua konten */
-.about-container {
-  width: 1100px !important; /* Paksa lebar tetap */
-  margin: 0 auto !important; /* Paksa posisi di tengah */
-  padding: 40px 0 100px;
-  display: block;
+  margin-bottom: 10px;
 }
 
-/* Judul "About Me" */
-.about-header {
-  width: 1100px;
+.projects {
+  width: 1100px; /* Disamakan agar lurus dengan nav */
   margin: 0 auto;
-  text-align: left;
-  padding-bottom: 20px;
+  padding: 0 0 120px;
+}
+
+.project-item {
+  display: block;
+  text-decoration: none;
+  color: #111;
+  margin-bottom: 140px;
+}
+
+.project-item img {
+  width: 100%;
+  display: block;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+
+.project-item img:hover {
+  filter: grayscale(0%);
+}
+
+.project-info {
+  margin-top: 24px;
+}
+
+.project-info h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* =========================
+   4. ABOUT ME (DIPERBAIKI AGAR STATIS)
+========================= */
+.about-container {
+  width: 1100px !important;
+  margin: 20px auto 100px !important;
 }
 
 .about-header h1 {
   font-size: 42px;
   font-weight: 600;
-  margin-bottom: 20px;
-  color: #111;
+  margin-bottom: 40px;
 }
 
-/* Pembungkus Kolom Kiri dan Kanan */
 .about-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 80px;
-  flex-wrap: nowrap; /* Mencegah kolom turun ke bawah saat di-zoom */
 }
 
-/* KOLOM KIRI: Foto & Biografi */
 .about-bio {
-  width: 650px !important; /* Ukuran tetap */
-  flex-shrink: 0; /* Mencegah kolom mengecil */
+  width: 650px !important;
 }
 
 .profile-img {
-  width: 350px; /* Ukuran foto ijazah */
+  width: 350px;
   height: auto;
   margin-bottom: 35px;
-  filter: grayscale(100%) contrast(1.1); /* Efek hitam putih arsitektural */
-  border-radius: 2px;
-  display: block;
+  filter: grayscale(100%);
 }
 
-.about-bio p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333;
-  margin-bottom: 25px;
-}
-
-/* KOLOM KANAN: Experience & Education */
 .about-cv {
-  width: 370px !important; /* Ukuran tetap */
-  flex-shrink: 0; /* Mencegah kolom mengecil */
+  width: 370px !important;
 }
 
 .cv-section h2 {
@@ -315,109 +164,85 @@ html {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #999;
-  margin-bottom: 25px;
   border-bottom: 1px solid #eee;
   padding-bottom: 8px;
-}
-
-.cv-item {
-  display: flex;
   margin-bottom: 25px;
 }
 
-.year {
-  font-size: 13px;
-  color: #999;
-  min-width: 95px;
-}
-
-.details h3 {
-  font-size: 17px;
-  font-weight: 600;
-  margin-bottom: 4px;
-  color: #111;
-}
-
-.details p {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
-}
-
-/* Menjamin Navigasi juga statis agar sejajar */
-.nav-container {
-  width: 1100px !important;
-  margin: 0 auto !important;
-}
+.cv-item { display: flex; margin-bottom: 25px; }
+.year { min-width: 95px; font-size: 13px; color: #999; }
 
 /* =========================
-   FIXED CONTACT PAGE
+   5. CONTACT (DIPERBAIKI ANTI-BIRU)
 ========================= */
-
 .contact-container {
-    max-width: 1100px; /* Sejajar Navigasi */
-    margin: 0 auto;
-    padding: 100px 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.contact-wrapper {
-    text-align: left; /* Biar sejajar tepi kiri nama Anda */
-}
-
-.sub-label {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #999;
-    margin-bottom: 10px;
-    display: block;
+  width: 1100px !important;
+  margin: 0 auto !important;
+  padding: 100px 0;
 }
 
 .contact-wrapper h1 {
-    font-size: 48px;
-    font-weight: 600;
-    margin-bottom: 40px;
-    color: #111;
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 40px;
 }
 
-.contact-methods {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* MENGHAPUS WARNA BIRU SECARA TOTAL */
 .c-link {
-    color: #111 !important; /* Hitam mutlak */
-    text-decoration: none !important;
-    font-size: 18px;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    transition: 0.3s;
+  color: #111 !important;
+  text-decoration: none !important;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
 }
 
-.c-link i {
-    font-size: 20px;
-    color: #111 !important;
-}
-
-.c-link:hover {
-    opacity: 0.5;
-}
+.c-link i { color: #111 !important; }
 
 .social-row {
-    display: flex;
-    gap: 40px;
-    margin-top: 10px;
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
 }
 
-/* Tambahkan garis bawah tipis khusus untuk link sosial */
-.social-row .c-link {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 4px;
+/* =========================
+   6. PROJECT DETAIL & UTILS (MILIK ANDA)
+========================= */
+.project-detail img {
+  width: 100%;
+  max-width: 1100px;
+  display: block;
+  margin: 0 auto 20px;
 }
 
-.social-row .c-link:hover {
-    border-bottom: 1px solid #111;
+.project-download {
+  display: flex;
+  justify-content: center;
+  margin: 80px 0;
+}
+
+.project-download a {
+  border: 1px solid #111;
+  padding: 16px 40px;
+  text-decoration: none;
+  color: #111;
+}
+
+.project-nav {
+  display: flex;
+  width: 1100px;
+  margin: 60px auto;
+}
+
+.project-nav a { flex: 1; text-decoration: none; color: #777; }
+.project-nav .home { text-align: center; }
+.project-nav .next { text-align: right; }
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px; right: 30px;
+  width: 45px; height: 45px;
+  background: #111; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; text-decoration: none;
 }
