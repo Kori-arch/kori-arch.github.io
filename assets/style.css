@@ -77,11 +77,13 @@ html {
 }
 
 /* =========================
-   3. HOMEPAGE & PROJECTS (MILIK ANDA)
+   3. HEADER & HOMEPAGE
 ========================= */
 header {
-  text-align: center;
-  padding: 120px 20px 80px;
+  width: 1100px;
+  margin: 0 auto;
+  text-align: left; /* KEMBALI KE KIRI */
+  padding: 80px 0 40px; /* Dikurangi agar tidak terlalu banyak blank putih */
 }
 
 header h1 {
@@ -124,17 +126,23 @@ header h1 {
 }
 
 /* =========================
-   4. ABOUT ME (DIPERBAIKI AGAR STATIS)
+   4. ABOUT ME (DIPERBAIKI AGAR STATIS & RAPAT)
 ========================= */
 .about-container {
   width: 1100px !important;
-  margin: 20px auto 100px !important;
+  margin: 0 auto !important;
+  padding: 0 0 100px; /* Menghapus padding atas agar rapat ke navigasi */
+}
+
+.about-header {
+  text-align: left; /* Memastikan judul About Me di kiri */
+  padding-bottom: 20px; /* Jarak ke konten di bawahnya */
 }
 
 .about-header h1 {
   font-size: 42px;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin: 0; 
 }
 
 .about-content {
@@ -142,6 +150,7 @@ header h1 {
   justify-content: space-between;
   align-items: flex-start;
   gap: 80px;
+  margin-top: 30px; /* Jarak antara judul dan foto */
 }
 
 .about-bio {
