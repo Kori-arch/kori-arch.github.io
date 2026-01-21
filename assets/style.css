@@ -307,3 +307,12 @@ html {
   font-size: 14px;
   color: #666;
 }
+
+.profile-img {
+  width: 250px; 
+  height: auto;
+  margin-bottom: 40px;
+  filter: grayscale(100%) contrast(1.1); 
+  border-radius: 2px;
+  display: block;
+}
