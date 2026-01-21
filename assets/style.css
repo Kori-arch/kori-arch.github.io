@@ -318,53 +318,62 @@ html {
 }
 
 /* =========================
-   CONTACT PAGE - FINAL CLEAN
+   CONTACT PAGE - MINIMALIST
 ========================= */
 
-/* 1. Atur container utama agar sejajar navigasi */
 .contact-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 80px 0 120px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 120px 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* 2. Hilangkan warna biru dan atur ikon */
-.contact-item a, 
-.social-links a {
-  color: #111 !important; /* Paksa jadi hitam agar tidak biru */
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px; /* Jarak antara ikon dan teks */
-  font-size: 20px;
-  font-weight: 500;
-  transition: opacity 0.3s;
+.sub-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #999;
+    margin-bottom: 10px;
 }
 
-.contact-item a:hover, 
-.social-links a:hover {
-  opacity: 0.6;
+.contact-header h1 {
+    font-size: 64px; /* Judul besar biar keren */
+    font-weight: 600;
+    margin-bottom: 60px;
 }
 
-/* 3. Atur ukuran ikon Font Awesome */
-.contact-item i {
-  font-size: 20px;
-  color: #555; /* Ikon sedikit lebih abu-abu agar elegan */
+.contact-links-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
-/* 4. Atur jarak antar link sosial */
-.social-links {
-  display: flex;
-  gap: 30px;
+/* KUNCI: Menghapus warna biru */
+.c-link {
+    color: #111 !important; /* Hitam pekat */
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: opacity 0.3s;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 4px;
 }
 
-/* 5. Tambahkan garis bawah tipis untuk Instagram/LinkedIn */
-.social-links a {
-  font-size: 16px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 4px;
+.c-link:hover {
+    opacity: 0.5;
+    border-bottom: 1px solid #111;
 }
 
-.social-links a:hover {
-  border-bottom: 1px solid #111;
+.social-group {
+    display: flex;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+/* Mengatur ukuran ikon */
+.c-link i {
+    font-size: 20px;
 }
