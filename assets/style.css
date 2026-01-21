@@ -77,66 +77,88 @@ html {
 }
 
 /* =========================
-   HOMEPAGE - SPLIT GRID STYLE
+   3. HEADER & HOMEPAGE (SPLIT-SCREEN GRID)
 ========================= */
+header {
+  width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 120px 0 60px; /* Ruang napas yang lega */
+}
+
+header h1 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #999;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+header p {
+  font-size: 28px;
+  color: #111;
+  max-width: 700px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
 .projects {
   width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Jarak tipis antar baris proyek seperti referensi */
-  padding-bottom: 100px;
+  gap: 10px; /* Jarak sangat tipis antar baris agar terlihat menyatu */
+  padding-bottom: 120px;
 }
 
 .project-item {
-  display: flex;
+  display: flex; /* Ini kunci Split-Screen */
   text-decoration: none;
   color: #111;
-  background-color: #f9f9f9; /* Background abu muda tipis untuk area teks */
-  align-items: stretch;
+  width: 100%;
+  height: 500px; /* Tinggi kotak tetap agar rapi */
+  overflow: hidden;
+  background-color: #f7f7f7; /* Latar belakang area teks */
 }
 
-/* Mengatur agar gambar di kiri dan teks di kanan */
 .project-item img {
-  width: 65%; /* Gambar mengambil area lebih besar */
-  height: 500px;
+  width: 65%; /* Gambar mengambil porsi lebih besar */
+  height: 100%;
   object-fit: cover;
-  display: block;
   filter: grayscale(100%);
-  transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+  transition: 0.8s ease;
 }
 
-.project-info {
-  width: 35%; /* Area teks di samping */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px;
-}
-
-/* Efek Hover: Gambar berwarna & background teks mungkin berubah sedikit */
 .project-item:hover img {
   filter: grayscale(0%);
 }
 
-/* Variasi: Membalik posisi (Gambar kanan, Teks kiri) untuk baris genap */
+.project-info {
+  width: 35%; /* Teks mengambil sisa ruang */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Teks tepat di tengah vertikal */
+  padding: 60px;
+  text-align: left; /* Teks rata kiri agar lebih arsitektural */
+}
+
+/* Membalik posisi secara bergantian agar tidak monoton */
 .project-item:nth-child(even) {
   flex-direction: row-reverse;
 }
 
 .project-info h2 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .project-info p {
-  font-size: 13px;
-  color: #999;
+  font-size: 14px;
+  color: #888;
 }
 
 /* =========================
