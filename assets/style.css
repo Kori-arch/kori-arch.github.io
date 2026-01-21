@@ -405,3 +405,26 @@ body {
   }
 
 }
+
+/* =========================
+   MOBILE ADJUSTMENT
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Bottom navigation size fix */
+  .project-nav {
+    margin: 40px 0 60px;
+  }
+
+  .project-nav .nav-link {
+    font-size: 13px;          /* samakan dengan header nav */
+    padding: 6px 0;           /* biar ringan */
+  }
+
+  /* Download button – mobile */
+  .project-download a {
+    font-size: 13px;
+    padding: 10px 22px;
+  }
+}
