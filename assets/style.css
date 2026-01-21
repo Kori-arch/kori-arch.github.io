@@ -364,6 +364,18 @@ body {
     padding: 30px 20px;
   }
 
+/* =========================
+   FIX HOMEPAGE PROJECT ORDER (MOBILE)
+========================= */
+
+.project-item {
+  flex-direction: column !important;
+}
+
+.project-item:nth-child(even) {
+  flex-direction: column !important;
+}
+   
   /* ABOUT */
   .about-container {
     width: 100% !important;
