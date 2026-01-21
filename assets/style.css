@@ -195,29 +195,26 @@ html {
 }
 
 /* =========================
-   TOP NAVIGATION
+   TOP NAVIGATION (FIXED)
 ========================= */
 
 .main-nav {
   width: 100%;
-  padding: 30px 0; /* Memberi ruang di atas dan bawah menu */
-  background-color: #fff; /* Pastikan background putih agar bersih */
-  position: sticky; /* Menu tetap ada di atas saat di-scroll (opsional) */
-  top: 0;
-  z-index: 1001;
+  background-color: #fff;
+  padding: 40px 0; /* Memberi jarak elegan dari atas layar */
 }
 
 .nav-container {
-  max-width: 1100px; /* SAMA DENGAN LEBAR GAMBAR ANDA */
-  margin: 0 auto;
+  max-width: 1100px;    /* KUNCI: Samakan dengan max-width gambar Anda */
+  margin: 0 auto;       /* Membuatnya ke tengah layar */
   display: flex;
-  justify-content: space-between; /* Nama di kiri, Menu di kanan */
+  justify-content: space-between; /* Lempar Nama ke kiri, Menu ke kanan */
   align-items: center;
-  padding: 0 24px; /* Padding aman untuk layar kecil */
+  padding: 0;           /* Nol agar benar-benar mepet tepi gambar */
 }
 
 .brand {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   text-decoration: none;
   color: #111;
@@ -225,17 +222,14 @@ html {
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 30px; /* Jarak antar menu */
+  gap: 30px; /* Jarak antar kata menu */
 }
 
 .nav-links a {
   text-decoration: none;
   color: #777;
   font-size: 14px;
-  text-transform: uppercase; /* Membuat teks jadi huruf kapital semua agar rapi */
-  letter-spacing: 1px;
   transition: color 0.3s;
 }
 
