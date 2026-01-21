@@ -77,73 +77,61 @@ html {
 }
 
 /* =========================
-   3. HEADER & HOMEPAGE (MODERN GRID)
+   HOMEPAGE - SPLIT GRID STYLE
 ========================= */
-header {
-  width: 1100px;
-  margin: 0 auto;
-  text-align: left;
-  padding: 100px 0 60px;
-}
-
-header h1 {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #999;
-  font-weight: 400;
-  margin-bottom: 15px;
-}
-
-header p {
-  font-size: 32px;
-  color: #111;
-  max-width: 750px;
-  line-height: 1.3;
-  font-weight: 600;
-}
-
 .projects {
   width: 1100px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr; /* Kolom kiri sedikit lebih lebar */
-  gap: 60px;
-  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Jarak tipis antar baris proyek seperti referensi */
+  padding-bottom: 100px;
 }
 
 .project-item {
+  display: flex;
   text-decoration: none;
   color: #111;
+  background-color: #f9f9f9; /* Background abu muda tipis untuk area teks */
+  align-items: stretch;
 }
 
-/* Memberikan efek zigzag arsitektural */
-.project-item:nth-child(even) {
-  margin-top: 100px;
-}
-
+/* Mengatur agar gambar di kiri dan teks di kanan */
 .project-item img {
-  width: 100%;
-  height: auto;
+  width: 65%; /* Gambar mengambil area lebih besar */
+  height: 500px;
+  object-fit: cover;
   display: block;
   filter: grayscale(100%);
-  transition: 0.7s cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-.project-item img:hover {
-  filter: grayscale(0%);
+  transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .project-info {
-  margin-top: 25px;
+  width: 35%; /* Area teks di samping */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+/* Efek Hover: Gambar berwarna & background teks mungkin berubah sedikit */
+.project-item:hover img {
+  filter: grayscale(0%);
+}
+
+/* Variasi: Membalik posisi (Gambar kanan, Teks kiri) untuk baris genap */
+.project-item:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .project-info h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 5px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
 }
 
 .project-info p {
