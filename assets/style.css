@@ -159,3 +159,32 @@ header p {
   max-width: 1100px;
   margin: 0 auto;
 }
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth; /* Membuat efek scroll jadi halus, tidak melompat */
+}
+
+/* BACK TO TOP BUTTON */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background-color: #111; /* Warna hitam agar senada dengan desain Anda */
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Membuat bentuk lingkaran */
+  font-size: 20px;
+  z-index: 1000; /* Agar tidak tertutup gambar */
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #444;
+  transform: translateY(-5px); /* Efek sedikit naik saat disentuh mouse */
+}
