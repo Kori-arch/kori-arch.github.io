@@ -19,17 +19,17 @@ html {
 }
 
 /* =========================
-   2. NAVIGASI (STATIS & INTUITIF)
+   2. NAVIGASI (DIPERAPAT)
 ========================= */
 .main-nav {
   width: 100%;
   background-color: #fff;
-  padding: 40px 0;
+  padding: 30px 0 10px; /* Kurangi padding bawah navigasi */
 }
 
 .nav-container {
-  width: 1100px !important;
-  margin: 0 auto !important;
+  width: 1100px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,34 +77,31 @@ html {
 }
 
 /* =========================
-   3. HEADER (DIPERBAIKI AGAR TERKUNCI)
+   3. HEADER (DIKURANGI SPACE ATASNYA)
 ========================= */
 header {
-  /* KUNCI: Lebar harus persis sama dengan .projects (1100px) */
-  width: 1100px; 
-  margin: 0 auto; /* Menjaga teks tetap di tengah layar bersama konten lainnya */
+  width: 1100px;
+  margin: 0 auto;
   text-align: left;
-  padding: 100px 0 60px;
-  /* Memastikan tidak ada padding samping yang bikin teks geser */
-  box-sizing: border-box; 
+  /* Jarak atas dikurangi dari 100px menjadi 40px agar lebih dekat ke nav */
+  padding: 40px 0 50px; 
 }
 
 header h1 {
-  font-size: 32px; 
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: #111;
-  /* Menghilangkan kemungkinan teks melebar tak terkontrol */
-  display: block; 
+  font-size: 11px; /* Ukuran subtitle 'Selected Works' diperkecil agar elegan */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #aaa;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 
 header p {
-  font-size: 15px;
-  color: #666;
-  /* Membatasi lebar teks deskripsi agar tetap proporsional */
-  max-width: 550px; 
-  line-height: 1.6;
-  display: block;
+  font-size: 24px; /* Sedikit dikecilkan agar komposisi teks lebih manis */
+  color: #111;
+  max-width: 650px;
+  line-height: 1.3;
+  font-weight: 600;
 }
 
 /* =========================
