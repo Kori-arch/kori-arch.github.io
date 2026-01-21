@@ -195,22 +195,22 @@ html {
 }
 
 /* =========================
-   TOP NAVIGATION (FIXED)
+   TOP NAVIGATION (UNIFIED)
 ========================= */
 
 .main-nav {
   width: 100%;
   background-color: #fff;
-  padding: 40px 0; /* Memberi jarak elegan dari atas layar */
+  padding: 40px 0; /* Jarak elegan dari atas */
 }
 
 .nav-container {
-  max-width: 1100px;    /* KUNCI: Samakan dengan max-width gambar Anda */
-  margin: 0 auto;       /* Membuatnya ke tengah layar */
+  max-width: 1100px; /* KUNCI: Sejajar dengan konten/gambar */
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between; /* Lempar Nama ke kiri, Menu ke kanan */
+  justify-content: space-between; /* Nama di kiri, Menu di kanan */
   align-items: center;
-  padding: 0;           /* Nol agar benar-benar mepet tepi gambar */
+  padding: 0;
 }
 
 .brand {
@@ -219,11 +219,12 @@ html {
   text-decoration: none;
   color: #111;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .nav-links {
   display: flex;
-  gap: 30px; /* Jarak antar kata menu */
+  gap: 30px; /* Jarak antar menu */
 }
 
 .nav-links a {
@@ -235,6 +236,13 @@ html {
 
 .nav-links a:hover {
   color: #111;
+}
+
+/* Penanda halaman aktif (Opsional) */
+.nav-links a.active {
+  color: #111;
+  font-weight: 600;
+}
 }
 
 /* =========================
