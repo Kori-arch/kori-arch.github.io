@@ -238,21 +238,27 @@ html {
 }
 
 /* =========================
-   ABOUT ME PAGE - FINAL CLEAN
+   ABOUT ME PAGE - ADJUSTED
 ========================= */
 
 .about-container {
-  max-width: 1100px; /* Sejajar dengan Navigasi */
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 60px 0 120px;
-  font-family: Arial, Helvetica, sans-serif; /* Paksa font modern */
+  /* Kurangi padding atas dari 60px ke 20px */
+  padding: 20px 0 100px; 
+}
+
+.about-header {
+  text-align: left;
+  /* Kurangi padding bawah dari 60px ke 30px */
+  padding: 20px 0 30px; 
 }
 
 .about-header h1 {
   font-size: 42px;
   font-weight: 600;
-  margin-bottom: 50px;
-  text-align: left;
+  /* Pastikan margin bottom tidak terlalu besar */
+  margin-bottom: 10px; 
 }
 
 .about-content {
