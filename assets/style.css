@@ -19,12 +19,12 @@ html {
 }
 
 /* =========================
-   2. NAVIGASI (Sapu Bersih)
+   2. NAVIGASI (BOLD ONLY FOR ACTIVE)
 ========================= */
 .main-nav {
   width: 100%;
   background-color: #fff;
-  padding: 30px 0 10px;
+  padding: 40px 0 20px;
 }
 
 .nav-container {
@@ -33,50 +33,52 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-}
-
-/* Pastikan ini ada di paling atas CSS */
-a {
-  text-decoration: none;
-  color: inherit; /* Nama KORIBUR ROHMAT akan ikut warna body (hitam) */
 }
 
 .brand {
   font-size: 20px;
   font-weight: 700;
   text-decoration: none !important;
-  color: #111 !important; /* Paksa warna hitam */
+  color: #111 !important;
   letter-spacing: 1px;
   text-transform: uppercase;
-  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px; 
 }
 
 .nav-links a {
   text-decoration: none !important;
-  color: #777 !important;
+  color: #888 !important; /* Warna abu-abu untuk menu tidak aktif */
   font-size: 16px;
-  transition: 0.3s;
+  font-weight: 400;
   position: relative;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
 }
 
+/* KUNCI: Hanya link AKTIF yang berwarna HITAM dan BOLD (Tanpa Garis Bawah) */
 .nav-links a.active {
   color: #111 !important;
-  font-weight: 600 !important; /* Efek Bold yang Anda suka dari page About */
+  font-weight: 600 !important;
 }
 
-/* Satu-satunya garis bawah yang diizinkan (animasi) */
+/* Garis bawah animasi */
 .nav-links a::after {
   content: '';
   position: absolute;
-  width: 0; height: 1px;
-  bottom: 0; left: 0;
+  width: 0; 
+  height: 1.5px; 
+  bottom: 0; 
+  left: 0;
   background-color: #111;
-  transition: 0.3s;
+  transition: width 0.3s ease;
 }
 
-.nav-links a.active::after,
+/* LOGIKA: Garis bawah HANYA muncul saat kursor menyentuh (Hover) */
+/* Menu aktif TIDAK akan punya garis bawah permanen */
 .nav-links a:hover::after {
   width: 100%;
 }
