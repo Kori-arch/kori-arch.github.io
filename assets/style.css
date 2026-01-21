@@ -246,26 +246,25 @@ html {
 }
 
 /* =========================
-   ABOUT ME PAGE - ADJUSTED
+   ABOUT ME - FIXED & STATIC
 ========================= */
 
 .about-container {
-  max-width: 1100px;
+  width: 1100px; /* Diubah dari max-width menjadi width agar statis */
   margin: 0 auto;
-  /* Kurangi padding atas dari 60px ke 20px */
   padding: 20px 0 100px; 
 }
 
 .about-header {
+  width: 1100px; /* Pastikan header juga terkunci */
+  margin: 0 auto;
   text-align: left;
-  /* Kurangi padding bawah dari 60px ke 30px */
   padding: 20px 0 30px; 
 }
 
 .about-header h1 {
   font-size: 42px;
   font-weight: 600;
-  /* Pastikan margin bottom tidak terlalu besar */
   margin-bottom: 10px; 
 }
 
@@ -273,10 +272,11 @@ html {
   display: flex;
   gap: 80px;
   justify-content: space-between;
+  align-items: flex-start; /* Menjaga kolom tetap rata atas */
 }
 
 .about-bio {
-  flex: 1.2; /* Kolom kiri lebih lebar */
+  width: 650px; /* Diubah dari flex ke ukuran pixel tetap */
 }
 
 .about-bio p {
@@ -287,7 +287,7 @@ html {
 }
 
 .about-cv {
-  flex: 0.8; /* Kolom kanan lebih ramping */
+  width: 370px; /* Diubah dari flex ke ukuran pixel tetap */
 }
 
 .cv-section h2 {
@@ -323,7 +323,7 @@ html {
 }
 
 .profile-img {
-  width: 250px; 
+  width: 350px; /* Sedikit diperbesar agar proporsional dengan kolom 650px */
   height: auto;
   margin-bottom: 40px;
   filter: grayscale(100%) contrast(1.1); 
