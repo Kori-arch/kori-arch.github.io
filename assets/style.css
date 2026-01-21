@@ -245,38 +245,56 @@ html {
 }
 }
 
-/* =========================
-   ABOUT ME - FIXED & STATIC
-========================= */
+/* =========================================
+   ABOUT ME PAGE - TOTAL FIXED & STATIC
+   Kunci lebar 1100px agar tidak goyang
+============================================ */
 
+/* Container utama yang membungkus semua konten */
 .about-container {
-  width: 1100px; /* Diubah dari max-width menjadi width agar statis */
-  margin: 0 auto;
-  padding: 20px 0 100px; 
+  width: 1100px !important; /* Paksa lebar tetap */
+  margin: 0 auto !important; /* Paksa posisi di tengah */
+  padding: 40px 0 100px;
+  display: block;
 }
 
+/* Judul "About Me" */
 .about-header {
-  width: 1100px; /* Pastikan header juga terkunci */
+  width: 1100px;
   margin: 0 auto;
   text-align: left;
-  padding: 20px 0 30px; 
+  padding-bottom: 20px;
 }
 
 .about-header h1 {
   font-size: 42px;
   font-weight: 600;
-  margin-bottom: 10px; 
+  margin-bottom: 20px;
+  color: #111;
 }
 
+/* Pembungkus Kolom Kiri dan Kanan */
 .about-content {
   display: flex;
-  gap: 80px;
   justify-content: space-between;
-  align-items: flex-start; /* Menjaga kolom tetap rata atas */
+  align-items: flex-start;
+  gap: 80px;
+  flex-wrap: nowrap; /* Mencegah kolom turun ke bawah saat di-zoom */
 }
 
+/* KOLOM KIRI: Foto & Biografi */
 .about-bio {
-  width: 650px; /* Diubah dari flex ke ukuran pixel tetap */
+  width: 650px !important; /* Ukuran tetap */
+  flex-shrink: 0; /* Mencegah kolom mengecil */
+}
+
+.profile-img {
+  width: 350px; /* Ukuran foto ijazah */
+  height: auto;
+  margin-bottom: 35px;
+  filter: grayscale(100%) contrast(1.1); /* Efek hitam putih arsitektural */
+  border-radius: 2px;
+  display: block;
 }
 
 .about-bio p {
@@ -286,8 +304,10 @@ html {
   margin-bottom: 25px;
 }
 
+/* KOLOM KANAN: Experience & Education */
 .about-cv {
-  width: 370px; /* Diubah dari flex ke ukuran pixel tetap */
+  width: 370px !important; /* Ukuran tetap */
+  flex-shrink: 0; /* Mencegah kolom mengecil */
 }
 
 .cv-section h2 {
@@ -302,33 +322,32 @@ html {
 
 .cv-item {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .year {
   font-size: 13px;
   color: #999;
-  min-width: 90px;
+  min-width: 95px;
 }
 
 .details h3 {
   font-size: 17px;
   font-weight: 600;
   margin-bottom: 4px;
+  color: #111;
 }
 
 .details p {
   font-size: 14px;
   color: #666;
+  margin: 0;
 }
 
-.profile-img {
-  width: 350px; /* Sedikit diperbesar agar proporsional dengan kolom 650px */
-  height: auto;
-  margin-bottom: 40px;
-  filter: grayscale(100%) contrast(1.1); 
-  border-radius: 2px;
-  display: block;
+/* Menjamin Navigasi juga statis agar sejajar */
+.nav-container {
+  width: 1100px !important;
+  margin: 0 auto !important;
 }
 
 /* =========================
