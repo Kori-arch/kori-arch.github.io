@@ -19,12 +19,12 @@ html {
 }
 
 /* =========================
-   2. NAVIGASI (MENGIKUTI STANDAR ABOUT)
+   2. NAVIGASI (FINAL - SEAMLESS)
 ========================= */
 .main-nav {
   width: 100%;
   background-color: #fff;
-  padding: 30px 0 10px; /* Jarak rapat sesuai permintaan sebelumnya */
+  padding: 30px 0 10px;
 }
 
 .nav-container {
@@ -33,40 +33,36 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px; /* Mengunci tinggi agar navigasi tidak goyang saat pindah page */
-}
-
-.brand {
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #111;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  height: 60px;
 }
 
 .nav-links {
   display: flex;
   gap: 30px;
-  /* Menghapus list-style karena kita pakai <div> sesuai halaman About */
+  list-style: none; /* Menghilangkan titik jika masih pakai ul/li */
+}
+
+.nav-links li {
+  display: inline; /* Menghilangkan titik di beberapa browser */
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #777; /* Warna abu-abu untuk menu yang tidak aktif */
+  color: #777;
   font-size: 16px;
   transition: 0.3s;
   position: relative;
   padding-bottom: 4px;
+  font-weight: 400; /* Default tidak bold */
 }
 
-/* Status Aktif (BOLD & HITAM) - Mengikuti style About */
+/* Status Aktif: BOLD & HITAM (Tanpa garis bawah default) */
 .nav-links a.active {
   color: #111 !important;
   font-weight: 600 !important;
 }
 
-/* Efek Garis Bawah yang Anda suka tetap dipertahankan */
+/* Animasi Garis Bawah saat Hover & Active */
 .nav-links a::after {
   content: '';
   position: absolute;
