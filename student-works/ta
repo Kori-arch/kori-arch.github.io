@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SCAC : Semarang Contemporary Art Center | Student Work</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
 
+<body id="top">
+
+<nav class="main-nav">
+  <div class="nav-container">
+    <a href="../index.html" class="brand">KORIBUR ROHMAT</a>
+    <div class="nav-links">
+      <a href="../index.html">Projects</a>
+      <a href="../student-works/" class="active">Student Works</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="project-detail">
+
+  <img src="../images/student/ta/1.jpg" loading="lazy" alt="ta Image 1">
+  <img src="../images/student/ta/2.jpg" loading="lazy" alt="ta Image 2">
+  <img src="../images/student/ta/3.jpg" loading="lazy" alt="ta Image 3">
+  <img src="../images/student/ta/4.jpg" loading="lazy" alt="ta Image 4">
+
+  <!-- OPTIONAL DOWNLOAD (kalau ada PDF) -->
+  <!--
+  <div class="project-download">
+    <a href="../pdf/TA.pdf" download>Download Project PDF</a>
+  </div>
+  -->
+
+  <div class="project-nav">
+    <a class="prev" href="spa-6.html">Previous</a>
+    <a class="home" href="../student-works/">Home</a>
+    <a class="next" href="sayembara-1.html">Next</a>
+  </div>
+
+</main>
+
+<a href="#top" class="back-to-top">↑</a>
+
+</body>
+</html>
