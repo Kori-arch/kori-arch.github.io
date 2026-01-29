@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SPA 5 | Student Work</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
 
+<body id="top">
+
+<nav class="main-nav">
+  <div class="nav-container">
+    <a href="../index.html" class="brand">KORIBUR ROHMAT</a>
+    <div class="nav-links">
+      <a href="../index.html">Projects</a>
+      <a href="../student-works/" class="active">Student Works</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="project-detail">
+
+  <img src="../images/student/spa-5/1.webp" loading="lazy" alt="SPA 5 Image 1">
+  <img src="../images/student/spa-5/2.webp" loading="lazy" alt="SPA 5 Image 2">
+  <img src="../images/student/spa-5/3.webp" loading="lazy" alt="SPA 5 Image 3">
+  <img src="../images/student/spa-5/4.webp" loading="lazy" alt="SPA 5 Image 4">
+  <img src="../images/student/spa-5/5.webp" loading="lazy" alt="SPA 5 Image 5">
+
+  <!-- OPTIONAL DOWNLOAD (kalau ada PDF) -->
+  <!--
+  <div class="project-download">
+    <a href="../pdf/SPA-5.pdf" download>Download Project PDF</a>
+  </div>
+  -->
+
+  <div class="project-nav">
+    <a class="prev" href="spa-6.html">Previous</a>
+    <a class="home" href="../student-works/">Home</a>
+    <a class="next" href="ta.html">Next</a>
+  </div>
+
+</main>
+
+<a href="#top" class="back-to-top">↑</a>
+
+</body>
+</html>
